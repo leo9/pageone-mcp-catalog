@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.leo9/careopenly",
+  "title": "CareOpenly - Find Senior Living  Communities",
+  "description": "Find U.S. senior living communities, public prices, reviews and licensing records.",
+  "version": "2.0.0",
+  "websiteUrl": "https://www.careopenly.com/connectors",
+  "icons": [
+    {
+      "src": "https://www.careopenly.com/icon.svg?icon.0bdva9nfc23u0.svg"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.careopenly.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "PageOne Lab, Inc.",
+      "contact": {
+        "name": "Jianyu Li",
+        "email": "leo@pageonelab.com"
+      },
+      "documentation": "https://www.careopenly.com/connectors",
+      "privacyPolicy": "https://www.careopenly.com/privacy",
+      "authentication": "none",
+      "readOnly": true,
+      "tools": [
+        "search_facilities",
+        "get_facility"
+      ],
+      "usageNotes": "Search public U.S. senior living community facts and inspect published starting prices, floor plans, review summaries and available government licensing/inspection records. Coverage varies. Published prices are dated observations, not quotes or availability guarantees. Information requests continue on careopenly.com; these MCP tools read public information."
+    }
+  }
+}

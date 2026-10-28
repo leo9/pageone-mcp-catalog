@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.leo9/brek",
+  "title": "Brek - Hotel Wholesale Booking",
+  "description": "Search hotels, compare room offers and public or masked wholesale rates, then continue on Brek.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.brek.com/help/connectors",
+  "icons": [
+    {
+      "src": "https://mcp.brek.com/brand/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.brek.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "PageOne Lab, Inc.",
+      "contact": {
+        "name": "Jianyu Li",
+        "email": "leo@pageonelab.com"
+      },
+      "documentation": "https://www.brek.com/help/connectors",
+      "privacyPolicy": "https://www.brek.com/privacy",
+      "authentication": "none",
+      "readOnly": true,
+      "tools": [
+        "search_accommodations",
+        "get_accommodation_details",
+        "get_accommodation_offers"
+      ],
+      "usageNotes": "Search hotel stays, inspect undated property facts and compare live room offers. Private wholesale prices are masked; exact prices, sign-in, booking and payment continue on brek.com. The MCP tools never create reservations or take payments. Prices and availability can change."
+    }
+  }
+}

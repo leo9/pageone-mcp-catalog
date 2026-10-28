@@ -1,0 +1,50 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.leo9/sota2",
+  "title": "SOTA2 — AI Solution Rankings",
+  "description": "Compare published AI solution rankings, company facts and research benchmarks with sources.",
+  "version": "1.0.6",
+  "websiteUrl": "https://www.sota2.com/with-ai",
+  "icons": [
+    {
+      "src": "https://www.sota2.com/favicon/android-chrome-512x512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.sota2.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "PageOne Lab, Inc.",
+      "contact": {
+        "name": "Jianyu Li",
+        "email": "leo@pageonelab.com"
+      },
+      "documentation": "https://www.sota2.com/with-ai",
+      "privacyPolicy": "https://www.sota2.com/mcp-privacy",
+      "authentication": "none",
+      "readOnly": true,
+      "tools": [
+        "search_companies",
+        "get_company",
+        "list_industries",
+        "list_tasks",
+        "get_solution_rankings",
+        "list_company_leaderboards",
+        "get_company_leaderboard",
+        "list_research_domains",
+        "search_research",
+        "get_research_entity",
+        "get_research_benchmark"
+      ],
+      "usageNotes": "Read published AI solution rankings, company facts, reported revenue leaderboards and research benchmarks. Use industry/task discovery and canonical IDs, preserve ranking scope and pagination, and cite sources. Reported revenue, ARR, estimates and forecasts remain separately labeled. Vendor compliance claims and research results are not independent audits. The tools read public data and provide no account, payment or write actions."
+    }
+  }
+}

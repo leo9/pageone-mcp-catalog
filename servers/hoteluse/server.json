@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.leo9/hoteluse",
+  "title": "HotelUse - Hotel Metasearch",
+  "description": "Compare hotel prices, room options and booking providers with live HotelUse searches.",
+  "version": "1.0.1",
+  "websiteUrl": "https://www.hoteluse.dev/docs/",
+  "icons": [
+    {
+      "src": "https://www.hoteluse.dev/favicon.svg"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.hoteluse.dev/mcp/search"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "PageOne Lab, Inc.",
+      "contact": {
+        "name": "Jianyu Li",
+        "email": "leo@pageonelab.com"
+      },
+      "documentation": "https://www.hoteluse.dev/docs/",
+      "privacyPolicy": "https://www.hoteluse.dev/privacy.html",
+      "authentication": "none",
+      "readOnly": true,
+      "tools": [
+        "search_hotels",
+        "get_room_rates",
+        "get_hotel"
+      ],
+      "usageNotes": "Search hotels, inspect hotel facts and compare grouped room options and provider prices. Use future stay dates for live availability. Booking and payment happen on the selected provider website. HotelUse may earn commissions from affiliate links; prices and availability can change."
+    }
+  }
+}

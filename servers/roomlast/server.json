@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.leo9/roomlast",
+  "title": "RoomLast - Last-Minute Hotels",
+  "description": "Find last-minute hotels, compare room offers, and continue on RoomLast to book.",
+  "version": "1.0.4",
+  "websiteUrl": "https://www.roomlast.com/help/roomlast-connectors",
+  "icons": [
+    {
+      "src": "https://vhr-public.s3.us-west-2.amazonaws.com/logos/roomlast_com/favicon/apple-touch-icon.png"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.roomlast.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "PageOne Lab, Inc.",
+      "contact": {
+        "name": "Jianyu Li",
+        "email": "leo@pageonelab.com"
+      },
+      "documentation": "https://www.roomlast.com/help/roomlast-connectors",
+      "privacyPolicy": "https://www.roomlast.com/privacy",
+      "authentication": "none",
+      "readOnly": true,
+      "tools": [
+        "search_accommodations",
+        "get_accommodation_details",
+        "get_accommodation_offers"
+      ],
+      "usageNotes": "Search last-minute hotels for tonight or tomorrow, inspect property facts and compare room offers. Private RoomLast price bands are masked. Exact prices, sign-in, booking and payment continue on roomlast.com. The MCP tools never create reservations or take payments; availability can change."
+    }
+  }
+}

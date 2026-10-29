@@ -2,6 +2,8 @@
 
 Public discovery metadata and Hermes catalog manifests for PageOne Lab, Inc.'s six hosted MCP services. The services expose public, read-only tools without MCP credentials. Contact: **leo@pageonelab.com**.
 
+As of October 28, 2026, [all six listings are active in the Official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.leo9). The [Hermes catalog submission PR](https://github.com/NousResearch/hermes-agent/pull/146268) is open for maintainer review; official Hermes catalog installation becomes available after it is merged.
+
 | App and documentation | MCP endpoint | Official Registry name |
 | --- | --- | --- |
 | [Brek - Hotel Wholesale Booking](https://www.brek.com/help/connectors) | `https://mcp.brek.com/mcp` | `io.github.leo9/brek` |

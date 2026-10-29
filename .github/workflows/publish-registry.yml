@@ -2,6 +2,21 @@ name: Publish MCP Registry listings
 
 on:
   workflow_dispatch:
+    inputs:
+      server:
+        description: Hosted server to publish
+        required: true
+        type: choice
+        default: brek-direct-booking
+        options:
+          - brek-direct-booking
+          - brek
+          - careopenly
+          - hoteluse
+          - roomlast
+          - sota2
+          - stayforwork
+          - all
 
 permissions:
   contents: read
@@ -19,6 +34,7 @@ jobs:
       id-token: write
     env:
       MCP_PUBLISHER_VERSION: v1.8.6
+      SERVER_TO_PUBLISH: ${{ inputs.server || 'all' }}
     steps:
       - name: Check out public catalog metadata
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -36,7 +52,7 @@ jobs:
             --certificate-identity "https://github.com/modelcontextprotocol/registry/.github/workflows/release.yml@refs/tags/${MCP_PUBLISHER_VERSION}" \
             --certificate-oidc-issuer "https://token.actions.githubusercontent.com" "$archive"
           tar xzf "$archive" mcp-publisher
-      - name: Validate all six records
+      - name: Validate catalog records
         shell: bash
         run: |
           set -euo pipefail
@@ -45,12 +61,16 @@ jobs:
           done
       - name: Authenticate with GitHub OIDC
         run: ./mcp-publisher login github-oidc
-      - name: Publish all six hosted servers
+      - name: Publish selected hosted servers
         shell: bash
         run: |
           set -uo pipefail
           result=0
           for manifest in servers/*/server.json; do
+            server="$(basename "$(dirname "$manifest")")"
+            if [[ "$SERVER_TO_PUBLISH" != "all" && "$server" != "$SERVER_TO_PUBLISH" ]]; then
+              continue
+            fi
             if ! ./mcp-publisher publish "$manifest"; then
               result=1
             fi

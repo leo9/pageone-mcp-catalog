@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.leo9/brek-direct-booking",
+  "title": "Brek — Direct Booking Finder",
+  "description": "Find property-manager direct booking pages for the same vacation rentals listed on Airbnb.",
+  "version": "2.2.0",
+  "websiteUrl": "https://www.brek.ai/help/connectors",
+  "icons": [
+    {
+      "src": "https://www.brek.ai/brand/brek-app-icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.brek.ai/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "PageOne Lab, Inc.",
+      "contact": {
+        "name": "Jianyu Li",
+        "email": "leo@pageonelab.com"
+      },
+      "documentation": "https://www.brek.ai/help/connectors",
+      "privacyPolicy": "https://www.brek.ai/privacy#direct-booking-mcp",
+      "authentication": "none",
+      "readOnly": true,
+      "tools": [
+        "lookup_direct_booking"
+      ],
+      "usageNotes": "Look up existing mappings for 1–10 specific Airbnb room URLs or exact listing IDs as strings. Returns mapped operator booking URLs, optional property names and images, and pagination. No match is a successful lookup, not a service error. Coverage varies; no price, availability, savings, reservation or payment capability is provided."
+    }
+  }
+}

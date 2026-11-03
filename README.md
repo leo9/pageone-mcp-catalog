@@ -7,14 +7,14 @@ As of October 28, 2026, [all six listings are active in the Official MCP Registr
 | App and documentation | MCP endpoint | Official Registry name |
 | --- | --- | --- |
 | [Brek - Hotel Wholesale Booking](https://www.brek.com/help/connectors) | `https://mcp.brek.com/mcp` | `io.github.leo9/brek` |
-| [Brek — Direct Booking Finder](https://www.brek.ai/help/connectors) | `https://api.brek.ai/mcp` | `io.github.leo9/brek-direct-booking` |
+| [Brek — Book Direct](https://www.brek.ai/help/connectors) | `https://api.brek.ai/mcp` | `io.github.leo9/brek-direct-booking` |
 | [HotelUse - Hotel Metasearch](https://www.hoteluse.dev/docs/) | `https://www.hoteluse.dev/mcp/search` | `io.github.leo9/hoteluse` |
 | [RoomLast - Last-Minute Hotels](https://www.roomlast.com/help/roomlast-connectors) | `https://mcp.roomlast.com/mcp` | `io.github.leo9/roomlast` |
 | [StayForWork - Housing and Hotels for Travel Workers](https://www.stayforwork.com/mcp/docs) | `https://www.stayforwork.com/mcp` | `io.github.leo9/stayforwork` |
 | [SOTA2 — AI Solution Rankings](https://www.sota2.com/with-ai) | `https://www.sota2.com/mcp` | `io.github.leo9/sota2` |
 | [CareOpenly - Find Senior Living  Communities](https://www.careopenly.com/connectors) | `https://mcp.careopenly.com/mcp` | `io.github.leo9/careopenly` |
 
-The vacation-rental Direct Booking Finder listing was added on October 29, 2026. Its publication and Hermes review are tracked separately from the hotel wholesale service.
+The vacation-rental Book Direct listing was added on October 29, 2026 and updated for destination search and exact Airbnb lookup on November 2, 2026. Its publication and Hermes review are tracked separately from the hotel wholesale service.
 
 ## Use with Hermes
 

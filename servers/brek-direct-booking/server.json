@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.leo9/brek-direct-booking",
-  "title": "Brek — Direct Booking Finder",
-  "description": "Find property-manager direct booking pages for the same vacation rentals listed on Airbnb.",
-  "version": "2.2.0",
+  "title": "Brek — Book Direct",
+  "description": "Search Airbnb vacation rentals and find direct booking options for the same homes.",
+  "version": "3.0.0",
   "websiteUrl": "https://www.brek.ai/help/connectors",
   "icons": [
     {
@@ -32,9 +32,10 @@
       "authentication": "none",
       "readOnly": true,
       "tools": [
-        "lookup_direct_booking"
+        "lookup_direct_booking",
+        "search_vacation_rentals"
       ],
-      "usageNotes": "Look up existing mappings for 1–10 specific Airbnb room URLs or exact listing IDs as strings. Returns mapped operator booking URLs, optional property names and images, and pagination. No match is a successful lookup, not a service error. Coverage varies; no price, availability, savings, reservation or payment capability is provided."
+      "usageNotes": "Search vacation rentals by destination, dates, guests, property type and amenities, or look up a specific Airbnb room URL or exact ID. Search returns Airbnb source-platform trip totals and mapped owner booking links when available; lookup returns mapped operator URLs for the exact home. A missing match is a normal result. Direct prices, availability, fees, terms and savings must be confirmed on the booking website. The tools do not contact hosts, reserve stays or process payments."
     }
   }
 }
